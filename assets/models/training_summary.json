@@ -1,0 +1,140 @@
+{
+  "n_buildings": 48725,
+  "dataset": {
+    "path": "..\\_audit_RCS\\relabel\\dataset_relabel_v1.parquet",
+    "sha256": "a8c248cb3094a3901d3d2b7d2502aa0e5eaa64cd9f07e1a448cf426ff81d6f66",
+    "label_version": "relabel_v1"
+  },
+  "split": {
+    "seed": 42,
+    "test_size": 0.2,
+    "stratify_col": "performance_class_old",
+    "n_train": 38980,
+    "n_test": 9745
+  },
+  "regression": {
+    "Vy": {
+      "R2": 0.9989849934919929,
+      "elapsed_s": 3.99930739402771,
+      "source": "pickle"
+    },
+    "delta_y": {
+      "R2": 0.9881923430065019,
+      "elapsed_s": 4.579231262207031,
+      "source": "pickle"
+    },
+    "Vmax": {
+      "R2": 0.9990127011806986,
+      "elapsed_s": 3.5950145721435547,
+      "source": "pickle"
+    },
+    "delta_max": {
+      "R2": 0.9453541655647608,
+      "elapsed_s": 6.870523929595947,
+      "source": "pickle"
+    },
+    "V_at_dt": {
+      "R2": 0.9960387963860864,
+      "elapsed_s": 3.423571825027466,
+      "source": "pickle"
+    },
+    "delta_t": {
+      "R2": 0.9958195355121313,
+      "elapsed_s": 3.872238874435425,
+      "source": "pickle"
+    },
+    "delta_u": {
+      "R2": 0.9889380036286197,
+      "elapsed_s": 4.618021488189697,
+      "source": "pickle"
+    },
+    "T1": {
+      "R2": 0.9913510171214652,
+      "elapsed_s": 1.4993932247161865,
+      "source": "pickle"
+    }
+  },
+  "regression_params_source": "Optuna JSON (summary_v2.json)",
+  "T1_params": {
+    "iterations": 400,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 3.0,
+    "random_seed": 42
+  },
+  "classifier": {
+    "accuracy": 0.9417136993329913,
+    "f1_macro": 0.927316774362704,
+    "f1_per_class": [
+      0.9471671049486015,
+      0.9593979005743711,
+      0.8626506024096385,
+      0.9400514895182053
+    ],
+    "confusion_matrix": [
+      [
+        1981,
+        114,
+        0,
+        0
+      ],
+      [
+        107,
+        4844,
+        89,
+        0
+      ],
+      [
+        0,
+        95,
+        1074,
+        74
+      ],
+      [
+        0,
+        5,
+        84,
+        1278
+      ]
+    ],
+    "n_test": 9745,
+    "params": {
+      "iterations": 661,
+      "depth": 7,
+      "learning_rate": 0.14951272957070255,
+      "l2_leaf_reg": 2.9350762452289234,
+      "bagging_temperature": 0.37021772519319485,
+      "random_strength": 0.6341336610461813,
+      "random_seed": 42
+    },
+    "params_source": "summary_v3.json (best_clf_params, class weights: None)",
+    "features_source": "pickle OOF (train) / full-fit (test)"
+  },
+  "classifier_test_accuracy": 0.9417136993329913,
+  "feature_columns": [
+    "N_story",
+    "N_bay",
+    "Lbay",
+    "h1",
+    "htyp",
+    "Htot",
+    "cover",
+    "col_B",
+    "col_H",
+    "beam_b",
+    "beam_h",
+    "rho_col",
+    "rho_beam_top",
+    "rho_beam_bot",
+    "fc_MPa",
+    "G",
+    "Q",
+    "soil_ord"
+  ],
+  "training_source": "pickle (paper-matching classifier)",
+  "environment": {
+    "python": "3.12.14",
+    "catboost": "1.2.10",
+    "trained_at": "2026-09-23 18:41:41"
+  }
+}

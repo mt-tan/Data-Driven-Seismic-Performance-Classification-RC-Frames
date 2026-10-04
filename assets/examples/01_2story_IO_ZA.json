@@ -1,0 +1,40 @@
+{
+  "description": "2-story, 3-bay frame on soil ZA (hold-out frame LHS_48778; reference class IO)",
+  "N_story": 2,
+  "N_bay": 3,
+  "Lbay": 4.95,
+  "h1": 3.53,
+  "htyp": 3.08,
+  "cover": 0.047,
+  "col_B": 0.56,
+  "col_H": 0.56,
+  "beam_b": 0.39,
+  "beam_h": 0.49,
+  "rho_col": 0.0149,
+  "rho_beam_top": 0.009,
+  "rho_beam_bot": 0.0061,
+  "fc_MPa": 32.8,
+  "G": 18.7,
+  "Q": 6.2,
+  "soil_ord": 0,
+  "reference": {
+    "source": "dataset_relabel_v1.parquet, reference test split (hold-out)",
+    "frame": "LHS_48778",
+    "label_version": "relabel_v1",
+    "performance_class": "IO",
+    "performance_class_before_relabel": "IO",
+    "opensees": {
+      "Vy_kN": 1027.6284938108759,
+      "delta_y_m": 0.019601434917646297,
+      "Vmax_kN": 1099.8670761663673,
+      "delta_max_m": 0.264463638160567,
+      "V_at_delta_t_kN": 631.7340012650666,
+      "delta_t_m": 0.01156934476752069,
+      "delta_u_m": 0.264463638160567,
+      "T1_s": 0.15968362978275805
+    },
+    "gui_verdict_at_release": "IO",
+    "gui_confidence_at_release": 1.0,
+    "note": "Inputs are the sampled values rounded to the display precision of the input panel; the OpenSees values refer to the sampled frame."
+  }
+}

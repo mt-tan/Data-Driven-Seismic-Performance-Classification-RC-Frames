@@ -1,0 +1,40 @@
+{
+  "description": "8-story, 2-bay frame on soil ZC (hold-out frame LHS_58528; reference class CP)",
+  "N_story": 8,
+  "N_bay": 2,
+  "Lbay": 3.22,
+  "h1": 4.05,
+  "htyp": 3.04,
+  "cover": 0.026,
+  "col_B": 0.42,
+  "col_H": 0.42,
+  "beam_b": 0.29,
+  "beam_h": 0.4,
+  "rho_col": 0.0285,
+  "rho_beam_top": 0.0051,
+  "rho_beam_bot": 0.0056,
+  "fc_MPa": 22.2,
+  "G": 40.3,
+  "Q": 7.8,
+  "soil_ord": 2,
+  "reference": {
+    "source": "dataset_relabel_v1.parquet, reference test split (hold-out)",
+    "frame": "LHS_58528",
+    "label_version": "relabel_v1",
+    "performance_class": "CP",
+    "performance_class_before_relabel": "C",
+    "opensees": {
+      "Vy_kN": 234.88297437794813,
+      "delta_y_m": 0.09033103378165563,
+      "Vmax_kN": 246.89186085353268,
+      "delta_max_m": 0.7543358636370912,
+      "V_at_delta_t_kN": 218.256492713871,
+      "delta_t_m": 0.23915422640942569,
+      "delta_u_m": 1.01388377214965,
+      "T1_s": 1.2690768806100203
+    },
+    "gui_verdict_at_release": "CP",
+    "gui_confidence_at_release": 0.9895,
+    "note": "Inputs are the sampled values rounded to the display precision of the input panel; the OpenSees values refer to the sampled frame."
+  }
+}
